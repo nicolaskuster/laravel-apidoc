@@ -10,8 +10,17 @@ composer require nicolaskuster/laravel-apidoc
 You can publish the config-file with:
 ```bash
 php artisan vendor:publish --provider="Nicolaskuster\ApiDoc\Providers\ApiDocServiceProvider"
-```     
+```
 
+### Register the Service Provider in `app/Providers/AppServiceProvider.php`
+```php
+    public function register()
+    {
+        if ($this->app->environment() === 'local') {
+            $this->app->register(\Nicolaskuster\ApiDoc\Providers\ApiDocServiceProvider::class);
+        }
+    }
+```
 ## Usage
 ```bash
 php artisan api:doc
