@@ -1,0 +1,36 @@
+{
+    "name": "nicolaskuster/laravel-apidoc",
+    "description": "Generates a Postman Collection of all your routes",
+    "keywords": [
+        "laravel",
+        "api",
+        "documentation",
+        "postman"
+    ],
+    "homepage": "https://github.com/nicolaskuster/laravel-apidoc",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Kuster",
+            "email": "mail@nicolaskuster.ch"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nicolaskuster\\ApiDoc\\": "src/psr-4/"
+        }
+    },
+    "require": {
+        "php": "^7.1",
+        "ramsey/uuid": "^3.7"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    }
+}
